@@ -1,0 +1,42 @@
+<html>
+    <head><title> Javascript Loops</title></head>
+    <body>
+        <h1>Javascript Do-While Loops</h1>
+        <script>
+            /*LOOPS son las partes del programa que se ejecutan 
+            mientras las condiciones sean dadas
+
+            DO-WHILE LOOP difiere en que primero se le hace correr el codigo
+            y luego se controla con la condición, si es verdadera vuelve a
+            correr y si es falsa termina, eso difiere en que por lo menos
+            1 vez corre si o si y se trabaja desde ese resultado
+            
+            En la prueba x=1, corre el codigo imprimiendo 
+            x primero y luego agregando 1 hasta que deje de cumplirse la
+            condición, si la condición es que sea menor a 10, el ultimo 
+            número que imprime es el 9
+
+            En la siguiente prueba indicando que y=15, solo vamos a ver 
+            impreso en consola el número 15 ya que corre primero la 
+            parte de imprimir, luego suma 1 y eso hace que y sea 16, y
+            al ser la condición que sea menor a 10, ya no vuelve a correr y 
+            lo termina
+            */
+
+            let x = 1;
+            do{
+                console.log(x);
+                x++;
+            }while(x<10)
+
+            let y = 15;
+            do{
+                console.log(y);
+                y++;
+            }while(y<10)
+            
+
+
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,40 @@
+<html>    
+<head><title>Object Accesors</title></head>
+    
+    <body>
+    <h1>JS Objects Accesors
+    </h1><p id = "demo"></p>
+
+    <script>
+        //esto es para mostrar la funcion GET, para acceder o agarrar
+        // algo en una variable
+        var car = {
+            model: "BMW 323",
+            color: "Blue",
+            fuel_type: "Diesel",
+            get fuel(){
+                return this.fuel_type;
+            }
+        };
+        document.getElementById("demo").innerHTML = car.fuel;
+    </script>
+
+<script>
+    //esto es para mostrar la funcion SET, para ingresar o modificar
+    // algo en una variable
+    var car = {
+        model: "Audi A4",
+        color: "Red",
+        fuel_type: "",
+        set fuel(fuel){
+            this.fuel_type = fuel;
+        }
+    }
+    car.fuel = "Petrol";
+    document.getElementById("demo").innerHTML = car.fuel_type;
+
+</script>
+
+
+</body>
+</html>

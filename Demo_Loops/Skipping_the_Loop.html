@@ -1,0 +1,39 @@
+<html>
+    <head><title> Javascript Loops</title></head>
+    <body>
+        <h1>Javascript Break the Loops</h1>
+        <script>
+            /*LOOPS son las partes del programa que se ejecutan 
+            mientras las condiciones sean dadas
+
+            SKIPPING para saltear una o varias respuestas del loop podemos 
+            usar la palabra "continue", para que dada la condición que le 
+            indiquemos en el IF esas las saltee 
+
+            En el primer ejemplo cuando llegue a que x es igua a 5, lo 
+            saltea y sigue al siguiente, asi que en la lista falta el 5
+
+            En el segundo ejemplo cuando y sea mayor a 4 y menor a 8 va a
+            saltearlos, osea que van a faltar en la lista los números 5, 6 y 7
+            */
+
+            let x;
+            for (x=1; x<10; x++){
+                if (x==5){
+                    continue;
+                }
+                console.log (x);
+            }
+
+            let y;
+            for (y=1; y<10; y++){
+                if (y>4 && y<8){
+                    continue;
+                }
+                console.log (y);
+            }
+            
+            
+        </script>
+    </body>
+</html> 

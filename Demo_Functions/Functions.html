@@ -1,0 +1,60 @@
+<html>    
+<head><title>Functions Declaration</title></head>
+    
+    <body>
+    <h1>Functions Declaration</h1><p id = "demo"></p>
+    
+    <script>
+        /* A function is a group of reusable code which can be called 
+        anywhere in the program
+        This eliminates the need of writing the same code again and again
+        It helps programmers write modular codes
+        la estructura de armado es la siguiente
+        <script type = "text/javascript">
+        function function_name (paramete_list){
+            function_body
+        }
+        < /script>
+        */
+
+        function My_Function (val){
+            document.getElementById("demo").innerHTML = val*val;
+        }
+        My_Function(5)
+
+    </script>
+
+    <script>
+        /*a JS function can also be defined using an expression 
+        a function expression can be stored in a varirable:
+        <script type = "text/javascript">
+        var x = function (a, b) {return a * b};
+        < /script>
+        */
+        let x = function(){
+            alert("Hello ");
+        }
+        document.getElementById("demo").innerHTML = x ();
+
+        //podemos tambien crear una variable que contenga otra variable
+
+        let y = x;
+        document.getElementById("demo").innerHTML = y ();
+
+    </script>
+
+    <script>
+        /*JS function care defined using the keyword function
+        functions can also be defined using the build-in JS function 
+        constructor called Function()
+        <script type = "text/javascript">
+        var myFunction = new Function ("a", "b", "return a + b");
+        var x = myFunction (4, 3);
+        < /script>
+        */
+        var myFunction = new Function("a", "b", "return a+b");
+        var z = myFunction (2,3);
+        document.getElementById("demo").innerHTML = "The sum is: " + z;
+    </script>
+</body>
+</html>

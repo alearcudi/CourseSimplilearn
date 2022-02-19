@@ -1,0 +1,26 @@
+<html>    
+<head><title>Object Propierties 3</title></head>
+    
+    <body>
+    <h1>JS Objects Propierties 3
+    </h1><p id = "demo"></p>
+
+    <script>
+    var student = {
+        name: "Chris",
+        age: 21,
+        studies: "Computer Science",
+    };
+    //o cambiar a una funcion para que busque en lugar de "name" el nómbre
+    //que le hayamos dado "y" en este caso (sin saber que es lo que pide)
+    x = "age";
+    y = "name";
+    z = "studies";
+
+    document.getElementById("demo").innerHTML = student[y] + " of the age " 
+    + student[x] + " studies " + student[z];
+
+    </script>
+    
+</body>
+</html>
