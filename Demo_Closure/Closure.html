@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+    <p id="demo"></p>
+</head>
+<body>
+
+    <script>
+        //This is a Global variable, any function created can use it (let x = 10)
+        let x = 10;
+        function My_function(){
+            //This is a Local variable, only this function can use it (let y = 20), because
+            //is in this function
+            let y = 20;
+            document.write(x+y);
+        }
+        My_function();
+
+    //Example
+        function Test_function(){
+            let z = 23;
+            document.write(x+z); //this works
+            document.write(y+z); //this do not
+        }
+        Test_function();
+    </script>
+
+
+
+    <script>
+        var a = 10;
+        function First_function(){
+            var b = 20
+            function Second_function(){
+                var c = a+b; //in this case, it is one function inside the other so can use
+                            //previous ones
+                return c;
+            }
+            return Second_function();
+        } var sum = First_function();
+        document.write("The sum is: " + sum + '<br>');
+
+    </script>
+    
+</body>
+</html>
