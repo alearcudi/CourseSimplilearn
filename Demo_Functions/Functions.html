@@ -1,4 +1,4 @@
-<html>    
+<!DOCTYPE html>    
 <head><title>Functions Declaration</title></head>
     
     <body>
@@ -56,5 +56,126 @@
         var z = myFunction (2,3);
         document.getElementById("demo").innerHTML = "The sum is: " + z;
     </script>
+
+    <script>
+        /*A self-invoking expresion is invoked (started) automatically, without being called 
+        Function expressions will execute automatically if the expresion is followed by ()
+        You have to add parentheses around the function to indicate that it is a function expression
+        <script> 
+                (function (){
+                    function_body // I will invoke myself
+                }) ();
+                < /script>
+        */
+        (function (){
+            alert("Hello! Welcome")
+        }) ()
+
+    </script>
+
+    <script>
+        /*Function as value. In JS a function is a value, so we can deal with it as a value. 
+        We first define the function and then assign it to a variable unlike in expressions.
+        <script>
+                function function_name (parameter_list){
+                    function_body // I will invoke myself
+                }
+                let x = function_name
+        < /script>
+        Aclaro un error que puede pasar para tener en cuenta, habia llamado al let "y" pero al ya 
+        tener una variable let "y" causaba un conflicto y no se presentaba, al cambiar el nombre 
+        del let por "j" se arreglo, por eso antes de probar eso implemente no solo el document. sino
+        la alerta y el console log, ahi viendo la consola vi que decia el error del nombre de la variable
+        ese es el problema de que en el curso borren paso a paso y aca lo sumo todo a lo mismo
+        */
+        function Product (a,b){
+            return a*b
+        }
+        let j = Product(2,5)*5
+        document.getElementById("demo").innerHTML = "The product is: " + j
+        alert("The product is: "+ j)
+        console.log("The product is: " + j)
+
+    </script>
+
+    <script>
+        /*Functions as objects. JS functions are special types of objects, called function objects.
+        A function object includes a string which holds the actual code i.e., the function body
+        of the function.  
+        <script>
+            var body = "function_body";
+            var function_name = new Function ("parameter_list", body);
+            alert (function_name(argument_value));
+        < /script>
+        */
+        var body = "return Math.PI * rad *rad"
+        var circle = new Function ("rad", body)
+        alert(circle(5))
+    </script>
+
+    <script>
+        /*Arrow functions. Functions can be written more compactly with the help of Arrow functions. 
+        Arrow function expressions are ill suited as methods, and they cannot be used as constructors
+        <script>
+            let func = (arg1, arg2, ...argN) => expression
+        < /script>
+        The above code can be re-written like this
+        <script>
+            let func = function(arg1, arg2, ...argN){
+                return expression; };
+        < /script>
+        */ 
+        const Myfunc = (a,b,c) => {return a*b*c}
+        let product = Myfunc (2,3,4)
+        document.getElementById("demo").innerHTML = "The product of the three digits is: " + product
+    </script>
+
+    <script>
+        /*Generator functions. Regular functions return only one single value (or nothing)
+        Generator can return ("yield") multiple values, one after another, on-demand
+        To create a generator, we use the syntax: function*
+        <script>
+            function* generateSecuence(){
+                yield 1;
+                yield 2;
+                return 3;
+            }
+        < /script>
+        next() returns two properties:
+            value: The yielded value
+            done: True if the function code is finished, false if otherwise
+        */
+        function* generateFunc(){
+            yield 1;
+            yield 2;
+            return 3;
+        }
+        let generator = generateFunc();
+        let one = generator.next();
+        let two = generator.next();
+        let three = generator.next();
+        alert (JSON.stringify(one));
+        alert (JSON.stringify(two));
+        alert (JSON.stringify(three));
+    </script>
+
+
+    <script>
+        /*Predefined functions
+        eval: Evaluate a string and returns a value
+        parseInt: Parses a string argument and return an integer of the specified radix or base
+        parseFloat: Parses a string argument and return a floating-point number
+        escape: Returns the hexadecimal encoding of an argument
+        unescape: Return the ASCII string for the specified value 
+        */
+
+        //eval
+        let a = 5;
+        let b = 6;
+        let c = 7;
+        console.log(eval("a+b"));
+        console.log(eval(c));
+    </script>
+
 </body>
 </html>
